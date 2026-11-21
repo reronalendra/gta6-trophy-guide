@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platinum Roadmap — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23d24e2a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <div class="title-block">
+    <h1>Platinum Roadmap</h1>
+    <p class="subtitle">The offline guide &amp; tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5 — official names, descriptions and grades, own-words guides with cited sources, a roadmap to the platinum, and one missable trophy to watch.</p>
+    <p class="facts" id="facts">55 trophies · 1 platinum · 2 gold · 6 silver · 46 bronze · 0 online · about 200 hours · difficulty 4/10 · 1 playthrough · no mission replay</p>
+  </div>
+  <div class="progress-block" id="progressBlock">
+    <div class="big-count" id="bigCount">0 / 55</div>
+    <div class="progress-bar" id="progressBar"><span id="progressFill"></span></div>
+    <p class="progress-text" id="progressText">0 of 55 earned · 0% to the platinum</p>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button type="button" data-tab="checklist" class="active" id="tabChecklist">Checklist</button>
+  <button type="button" data-tab="roadmap" id="tabRoadmap">Roadmap to Platinum</button>
+  <button type="button" data-tab="missable" id="tabMissable">Missable (1)</button>
+</nav>
+
+<section class="toolbar" id="toolbar">
+  <div class="toolbar-row">
+    <label class="search-label">Search <input id="search" type="search" placeholder="Search trophy, mission…"></label>
+    <div class="kind-filters" id="kindFilters">
+      <button type="button" data-kind="all" class="active">All</button>
+      <button type="button" data-kind="story">Story</button>
+      <button type="button" data-kind="side">Side</button>
+      <button type="button" data-kind="missable">Missable</button>
+      <button type="button" data-kind="collectibles">Collectibles</button>
+      <button type="button" data-kind="activities">Activities</button>
+      <button type="button" data-kind="misc">Misc</button>
+      <button type="button" data-kind="online">Online</button>
+    </div>
+    <label class="grade-label">Grade
+      <select id="gradeFilter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+  </div>
+  <div class="toolbar-row">
+    <label class="spoiler-label"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers until earned</label>
+    <div class="save-actions">
+      <button type="button" id="exportBtn">Export progress</button>
+      <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button type="button" id="resetBtn">Reset</button>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="viewChecklist" class="view">
+    <div class="split">
+      <div class="list-col">
+        <p class="list-meta" id="listMeta"></p>
+        <ul class="trophy-list" id="trophyList"></ul>
+        <p class="empty-note" id="emptyNote" hidden>No trophies match these filters.</p>
+      </div>
+      <aside class="detail-col" id="detailPane" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="viewRoadmap" class="view" hidden>
+    <div class="roadmap-intro" id="roadmapIntro"></div>
+    <div class="stages" id="stages"></div>
+  </section>
+
+  <section id="viewMissable" class="view" hidden>
+    <div class="missable-intro" id="missableIntro"></div>
+    <div class="missable-list" id="missableList"></div>
+    <div class="safe-note" id="safeNote"></div>
+  </section>
+</main>
+
+<footer id="footer">
+  <h2>Sources &amp; honesty note</h2>
+  <p>Every trophy's official name, description and grade comes from the official PlayStation 5 list as published by Exophase and PSNProfiles, who agree on all 55. Each guide is written in our own words for this guide; where a fact comes from a published guide — the 200-hour estimate, the 4/10 difficulty, the no-mission-replay rule, the one missable meditation — the guide names that source beside the trophy. A few official descriptions are deliberately vague (a joke, or a hidden moment); where the exact trigger is still being confirmed by guide writers, the guide says so instead of inventing a location or a step.</p>
+  <ul class="source-list" id="sourceList"></ul>
+  <p class="fineprint">Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. No Rockstar logo, artwork or game screenshots are used. Works fully offline: it loads only its own files and saves progress in this browser only.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
